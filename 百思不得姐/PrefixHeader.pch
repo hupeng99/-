@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by 胡鹏 on 16/5/20.
+//  Copyright © 2016年 胡鹏. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#ifdef __OBJC__
+//颜色
+#import "UIView+XMGExtension.h"
+#import "MBProgressHUD+MJ.h"
+#import "SQLManger.h"
+#define HPColorA(r,g,b,a)   [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define HPColor(r,g,b)  HPColorA((r),(g),(b),255)
+//日志输出
+
+#ifdef  DEBUG
+#define HPLog(...)  NSLog(__VA_ARGS__)
+#else
+#define HPLog(...)
+#endif
+
+#endif
+
+#endif /* PrefixHeader_pch */
